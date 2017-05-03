@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ecommerce</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+  <div id="app-5">
+    <div class="login">
+        <header class="login-header"><span class="text">LOGIN</span><span class="loader"></span></header>
+            <input class="login-input" v-model="username" type="text" placeholder="Username" />
+            <input class="login-input" v-model="password" type="password" placeholder="Password" />
+            <button class="login-btn" v-on:click="signIn" type="submit">login</button>
+    </div>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="js/login.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    var app = new Vue({
+      el: '#app-5',
+      data: {
+        username : '',
+        password : ''
+      },
+      methods: {
+        signIn: function(){
+          axios.post('http://localhost:3000/signin',{
+            username : this.username,
+            password : this.password
+          })
+          .then(function(respon){
+            console.log(respon.data.token);
+            localStorage.setItem('token', respon.data.token)
+            window.location='/home.html'
+          })
+          .catch((err)=>{
+            alert(err)
+          })
+        }
+      }
+    })
+    </script>
+</body>
+
+</html>

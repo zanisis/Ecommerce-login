@@ -1,0 +1,51 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+/* VARIABLES FOR USE */
+/* TOP NAVBAR */
+.nav {
+  background-color: rgb(161, 67, 227);
+  padding: 1em 0;
+  margin-bottom: 1em; }
+  .nav .nav-right {
+    padding: 0 2em; }
+  .nav .nav-toggle {
+    padding: 0 2em; }
+
+.shoop {
+  font-size: 2em;
+  padding: 0 1.5em;
+  color: antiquewhite;
+}
+
+/* COLUMNS */
+.columns {
+  margin: auto;
+  width: 100%; }
+
+.panel {
+  position: fixed;
+  width: 22%;
+  margin-right: 0;
+  margin-left: 0; }
+
+/* TILES */
+.image-header {
+  background-color: rgba(255, 255, 255, 0.5); }
+
+.p-category {
+  text-align: center; }
+
+.category-title {
+  border-bottom: solid 1px; }
+
+/* ICONS */
+.i-category {
+  float: left; }
